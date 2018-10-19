@@ -51,8 +51,7 @@ ADD CONSTRAINT stars CHECK( stars >= 1 and stars <= 5);
 ALTER TABLE rating
 ADD CONSTRAINT ratingDate CHECK( ratingDate > '2000-01-01')
 ALTER TABLE movie 
-ADD CONSTRAINT director CHECK((director = 'Steven Spielberg' AND year >= 1990) OR (director = 'James Cameron' AND year >= 1990));
---2&3
+ADD CONSTRAINT director CHECK((director = 'Steven Spielberg' AND year >= 1990) OR (director = 'James Cameron' AND year >= 1990) OR (year >= 1900 AND director != 'James Cameron' AND director != 'Steven Spielberg'));--2&3
 --I have tried every command from the laboratory work and pgAdmin shows an error on every command supposed to be wrong, and works right when it's needed from the task.
 
 --4
