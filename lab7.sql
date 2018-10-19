@@ -63,3 +63,4 @@ update Movie set mID = 109 where mID = 102;
 update Reviewer set rID = rID + 10;
 delete from Reviewer where rID > 215;
 delete from Movie where mID < 105;
+--Check is showing the right values ( according to the html file ).
